@@ -33,7 +33,7 @@ management:
         include: "*"
   zipkin:
     tracing:
-      endpoint: "http://tempo:9411/api/v2/spans"
+      endpoint: "http://jaeger:9411/api/v2/spans"
   endpoint:
     health:
       show:
