@@ -42,7 +42,7 @@ services:
   #    - app_network
 
   jaeger:
-    image: jaegertracing/jaeger:2.9.0
+    image: jaegertracing/jaeger:2.22.0
     ports:
       - "16686:16686" # UI
       - "14268:14268" # HTTP collector
