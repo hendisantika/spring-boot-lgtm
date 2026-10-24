@@ -62,7 +62,7 @@ updates:
       # Stay on the JDK 25 LTS line; skip major Java image bumps
       - dependency-name: "amazoncorretto"
         update-types: [ "version-update:semver-major" ]
-      - dependency-name: "maven"
+      - dependency-name: "eclipse-temurin"
         update-types: [ "version-update:semver-major" ]
 
   # Observability stack images in compose.yaml (Prometheus, Jaeger, Loki, Grafana)

@@ -175,7 +175,7 @@ All times are in `Asia/Jakarta`. Pull requests are labelled and use Conventional
 
 ## Docker Build
 
-The application uses a multi-stage Docker build for efficiency: `maven:3.9.11-eclipse-temurin-25` to build and
+The application uses a multi-stage Docker build for efficiency: `eclipse-temurin:25-jdk-alpine` with the Maven Wrapper to build and
 `amazoncorretto:25-alpine-jdk` to run:
 
 ```bash

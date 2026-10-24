@@ -1,9 +1,11 @@
 # Stage 1: Build the application
-FROM maven:3.9.11-eclipse-temurin-25 AS build
+FROM eclipse-temurin:25-jdk-alpine AS build
 WORKDIR /app
-COPY pom.xml .
+COPY .mvn .mvn
+COPY mvnw pom.xml ./
+RUN ./mvnw -B dependency:go-offline
 COPY src ./src
-RUN mvn clean package -DskipTests
+RUN ./mvnw -B clean package -DskipTests
 
 # Stage 2: Create the runtime image
 FROM amazoncorretto:25-alpine-jdk
